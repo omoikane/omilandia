@@ -1,0 +1,19 @@
+
+# TEAM
+
+    Web designer: Daniele De Nobili
+    Twitter: @danieledenobili
+    From: Venice, Italy
+
+# THANKS
+
+    Effects: Mary Lou (Manoela Ilic)
+    Twitter: @crnacura
+    From: http://tympanus.net/codrops/
+
+# SITE
+
+    Last update: 2013/06/01
+	Language: Italian
+	Doctype: HTML5
+	IDE: PHPStorm
