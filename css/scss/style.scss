@@ -124,7 +124,7 @@ html {
 body {
 	margin: 0 auto;
 	text-align: center;
-	width: 400px;
+	width: 25em;
 }
 
 h1, p {
@@ -135,7 +135,8 @@ h1, p {
 h1 {
 	border-bottom: 2px solid #fff;
 	font-size: 3em;
-	line-height: 2em;
+	line-height: 1em;
+	padding-bottom: 1em;
 }
 
 a, a:visited {
@@ -160,16 +161,15 @@ a, a:visited {
 		color: #fff;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0;
-		height: $social-width;
-		margin: 8px;
+		height: 4em;
+		margin: 0.3em;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
 		-webkit-transition: box-shadow 0.2s;
 		-moz-transition: box-shadow 0.2s;
 		transition: box-shadow 0.2s;
-		width: $social-width;
+		width: 4em;
 		z-index: 1;
 
 		&:after {
@@ -194,11 +194,11 @@ a, a:visited {
 		&:before {
 			display: block;
 			font-family: 'entypo';
-			font-size: 32px;
+			font-size: 2em;
 			font-style: normal;
 			font-variant: normal;
 			font-weight: normal;
-			line-height: $social-width;
+			line-height: 2em;
 			text-transform: none;
 			speak: none;
 			-webkit-font-smoothing: antialiased;
@@ -209,6 +209,8 @@ a, a:visited {
 		&.facebook:before { content: "\e002"; }
 		&.googleplus:before { content: "\e005"; }
 		&.pinterest:before { content: "\e000"; }
+
+		span { font-size: 0; }
 	}
 }
 
@@ -229,7 +231,6 @@ a, a:visited {
 
 	&.github:hover     {
 		color: $color-github;
-//		box-shadow: 0 0 0 6px rgba($color-github, .5);
 		&:after {
 			box-shadow: 0 0 0 3px $color-github;
 		}
@@ -237,7 +238,6 @@ a, a:visited {
 
 	&.twitter:hover {
 		color: $color-twitter;
-//		box-shadow: 0 0 0 6px rgba($color-twitter, .5);
 		&:after {
 			box-shadow: 0 0 0 3px $color-twitter;
 		}
@@ -245,7 +245,6 @@ a, a:visited {
 
 	&.facebook:hover {
 		color: $color-facebook;
-//		box-shadow: 0 0 0 6px rgba($color-facebook, .5);
 		&:after {
 			box-shadow: 0 0 0 3px $color-facebook;
 		}
@@ -253,7 +252,6 @@ a, a:visited {
 
 	&.googleplus:hover {
 		color: $color-googleplus;
-//		box-shadow: 0 0 0 6px rgba($color-googleplus, .5);
 		&:after {
 			box-shadow: 0 0 0 3px $color-googleplus;
 		}
@@ -261,7 +259,6 @@ a, a:visited {
 
 	&.pinterest:hover  {
 		color: $color-pinterest;
-//		box-shadow: 0 0 0 6px rgba($color-pinterest, .5);
 		&:after {
 			box-shadow: 0 0 0 3px $color-pinterest;
 		}
@@ -388,15 +385,17 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 20em) {
+	body { width: 18em; }
+	h1 span { display: block; }
 }
 
-@media print,
-(-o-min-device-pixel-ratio: 5/4),
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 120dpi) {
-	/* Style adjustments for high resolution devices */
+@media only screen and (min-width: 30em) {
+	body { font-size: 1.1em; }
+}
+
+@media only screen and (min-width: 50em) {
+	body { font-size: 1.3em; }
 }
 
 /* ==========================================================================
@@ -425,9 +424,9 @@ footer {
 		content: " (" attr(title) ")";
 	}
 
-	/*
-	 * Don't show links for images, or javascript/internal links
-	 */
+/*
+ * Don't show links for images, or javascript/internal links
+ */
 
 	.ir a:after,
 	a[href^="javascript:"]:after,

@@ -515,7 +515,7 @@ html {
 body {
   margin: 0 auto;
   text-align: center;
-  width: 400px; }
+  width: 25em; }
 
 h1, p {
   font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -524,7 +524,8 @@ h1, p {
 h1 {
   border-bottom: 2px solid #fff;
   font-size: 3em;
-  line-height: 2em; }
+  line-height: 1em;
+  padding-bottom: 1em; }
 
 a, a:visited {
   color: #fff; }
@@ -542,16 +543,15 @@ a, a:visited {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 0;
-    height: 60px;
-    margin: 8px;
+    height: 4em;
+    margin: 0.3em;
     position: relative;
     text-align: center;
     text-decoration: none;
     -webkit-transition: box-shadow 0.2s;
     -moz-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
-    width: 60px;
+    width: 4em;
     z-index: 1; }
     #social a:after {
       box-shadow: 0 0 0 3px #fff;
@@ -573,11 +573,11 @@ a, a:visited {
     #social a:before {
       display: block;
       font-family: 'entypo';
-      font-size: 32px;
+      font-size: 2em;
       font-style: normal;
       font-variant: normal;
       font-weight: normal;
-      line-height: 60px;
+      line-height: 2em;
       text-transform: none;
       speak: none;
       -webkit-font-smoothing: antialiased; }
@@ -591,6 +591,8 @@ a, a:visited {
       content: "\e005"; }
     #social a.pinterest:before {
       content: "\e000"; }
+    #social a span {
+      font-size: 0; }
 
 .no-touch #social a:hover {
   background-color: #fff;
@@ -634,10 +636,18 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
+@media only screen and (max-width: 20em) {
+  body {
+    width: 18em; }
+
+  h1 span {
+    display: block; } }
+@media only screen and (min-width: 30em) {
+  body {
+    font-size: 1.1em; } }
+@media only screen and (min-width: 50em) {
+  body {
+    font-size: 1.3em; } }
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
