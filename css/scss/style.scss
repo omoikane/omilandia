@@ -208,7 +208,7 @@ a, a:visited {
 		&.googleplus:before { content: "\e005"; }
 		&.pinterest:before { content: "\e000"; }
 
-		span { font-size: 0; }
+		span { display: none; }
 	}
 }
 
