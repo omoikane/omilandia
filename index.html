@@ -7,23 +7,29 @@
         <meta name="description" content="Pagina personale di Daniele De Nobili">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
 		<script type="text/javascript">
-			WebFontConfig = {
-				google: { families: [ 'Lato:300:latin' ] }
-			};
+			(function (w, d, t, s, e) {
+				w.WebFontConfig={google:{families:['Lato:300:latin']}};
 
-			(function(d) {
-				var wf = d.createElement('script'),
-						s = d.getElementsByTagName('script')[0];
-				wf.src = ('https:' == d.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-				wf.type = 'text/javascript';
-				wf.async = 'true';
-				s.parentNode.insertBefore(wf, s);
-			}(document));
+				w.GoogleAnalyticsObject='ga';
+				w.ga=w.ga||function(){(w.ga.q=w.ga.q||[]).push(arguments)};
+				w.ga.l=+new Date();
+
+				function load(src) {
+					s=d.createElement(t);e=d.getElementsByTagName(t)[0];
+					s.src=src;e.parentNode.insertBefore(s,e);
+				}
+
+				load('//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js');
+				load('//www.google-analytics.com/analytics.js');
+
+				ga('create', 'UA-413168-1', 'auto');
+				ga('send', 'pageview');
+			}(window, document, 'script'));
 		</script>
-
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -43,14 +49,5 @@
 		<footer>
 			<p>© 2013, Daniele De Nobili – <a href="http://www.amazon.it/registry/wishlist/1NBGWEUY9KS1E" target="_blank">WishList</a></p>
 		</footer>
-
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-413168-1');ga('send','pageview');
-        </script>
     </body>
 </html>
