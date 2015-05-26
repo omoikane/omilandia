@@ -208,17 +208,70 @@ a, a:visited {
 			-webkit-font-smoothing: antialiased;
 		}
 
+		&:hover {
+			background-color: #fff;
+			box-shadow: 0 0 0 6px rgba(255,255,255,.5);
+			color: #fff;
+
+			&:after {
+				-webkit-transform: scale(0.80);
+				-moz-transform: scale(0.85);
+				-ms-transform: scale(0.85);
+				transform: scale(0.80);
+				opacity: 0.5;
+			}
+		}
+
 		&.github:before { content: "\e001"; }
+
+		&.github:hover     {
+			color: $color-github;
+			&:after {
+				box-shadow: 0 0 0 3px $color-github;
+			}
+		}
+
 		&.twitter:before { content: "\e004"; }
+
+		&.twitter:hover {
+			color: $color-twitter;
+			&:after {
+				box-shadow: 0 0 0 3px $color-twitter;
+			}
+		}
+
 		&.facebook:before { content: "\e002"; }
+
+		&.facebook:hover {
+			color: $color-facebook;
+			&:after {
+				box-shadow: 0 0 0 3px $color-facebook;
+			}
+		}
+
 		&.googleplus:before { content: "\e005"; }
+
+		&.googleplus:hover {
+			color: $color-googleplus;
+			&:after {
+				box-shadow: 0 0 0 3px $color-googleplus;
+			}
+		}
+
 		&.pinterest:before { content: "\e000"; }
+
+		&.pinterest:hover  {
+			color: $color-pinterest;
+			&:after {
+				box-shadow: 0 0 0 3px $color-pinterest;
+			}
+		}
 
 		span { display: none; }
 	}
 }
 
-.no-touch #social a {
+#social a {
 	&:hover {
 		background-color: #fff;
 		box-shadow: 0 0 0 6px rgba(255,255,255,.5);
