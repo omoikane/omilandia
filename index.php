@@ -7,7 +7,7 @@
         <meta name="description" content="Pagina personale di Daniele De Nobili">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="css/style.css">
+		<style><?php echo file_get_contents('css/style.css'); ?></style>
 
 		<script>
 			(function (w, d, t, s, e) {
