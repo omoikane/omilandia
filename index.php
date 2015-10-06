@@ -26,6 +26,7 @@
 				load('//www.google-analytics.com/analytics.js');
 
 				ga('create', 'UA-413168-1', 'auto');
+				ga('set', 'anonymizeIp', true);
 				ga('send', 'pageview');
 			}(window, document, 'script'));
 		</script>
