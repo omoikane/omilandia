@@ -47,7 +47,7 @@
 		</ul>
 
 		<footer>
-			<p>© 2013-2015, Daniele De Nobili – <a href="http://www.amazon.it/registry/wishlist/1NBGWEUY9KS1E" target="_blank">WishList</a></p>
+			<p>© 2013-<?= date('Y'); ?>, Daniele De Nobili – <a href="http://www.amazon.it/registry/wishlist/1NBGWEUY9KS1E" target="_blank">WishList</a></p>
 		</footer>
     </body>
 </html>
