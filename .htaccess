@@ -323,7 +323,7 @@ AddDefaultCharset utf-8
     RewriteEngine On
 
     # (2)
-    Options +FollowSymlinks
+    # Options +FollowSymlinks
 
     # (3)
     # Options +SymLinksIfOwnerMatch
@@ -335,10 +335,10 @@ AddDefaultCharset utf-8
     # RewriteOptions <options>
 
     # (6)
-    RewriteCond %{HTTPS} =on
-    RewriteRule ^ - [env=proto:https]
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^ - [env=proto:http]
+    # RewriteCond %{HTTPS} =on
+    # RewriteRule ^ - [env=proto:https]
+    # RewriteCond %{HTTPS} !=on
+    # RewriteRule ^ - [env=proto:http]
 
 </IfModule>
 
@@ -377,12 +377,12 @@ AddDefaultCharset utf-8
 
 # Option 1: rewrite www.example.com → example.com
 
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{HTTPS} !=on
+#     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#     RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+# </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -498,9 +498,9 @@ AddDefaultCharset utf-8
 # anyone to surf through every directory on your server (which may
 # includes rather private places such as the CMS's directories).
 
-<IfModule mod_autoindex.c>
-    Options -Indexes
-</IfModule>
+# <IfModule mod_autoindex.c>
+#     Options -Indexes
+# </IfModule>
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
