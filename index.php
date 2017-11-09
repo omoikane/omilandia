@@ -22,8 +22,8 @@
 					s.src=src;e.parentNode.insertBefore(s,e);
 				}
 
-				load('https//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js');
-				load('https//www.google-analytics.com/analytics.js');
+				load('https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js');
+				load('https://www.google-analytics.com/analytics.js');
 
 				ga('create', 'UA-413168-1', 'auto');
 				ga('set', 'anonymizeIp', true);
