@@ -267,39 +267,39 @@ AddDefaultCharset utf-8
 # | https with www                                                      |
 # ----------------------------------------------------------------------
 
-# <ifmodule mod_rewrite.c>
-#     RewriteEngine On
-#
-#   # http(s)://example.com → https://www.example.com
-#
-#     RewriteCond %{HTTP_HOST} !^www\. [NC]
-#     RewriteCond %{HTTP_USER_AGENT} !(Facebot|facebookexternalhit) [NC]
-#     RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-#
-#   # http://(www.)example.com → https://www.example.com
-#
-#     RewriteCond %{HTTPS} off
-#     RewriteCond %{HTTP_USER_AGENT} !(Facebot|facebookexternalhit) [NC]
-#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </ifmodule>
+<ifmodule mod_rewrite.c>
+    RewriteEngine On
+
+  # http(s)://example.com → https://www.example.com
+
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_USER_AGENT} !(Facebot|facebookexternalhit) [NC]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # http://(www.)example.com → https://www.example.com
+
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_USER_AGENT} !(Facebot|facebookexternalhit) [NC]
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</ifmodule>
 
 # ----------------------------------------------------------------------
 # | https without www                                                    |
 # ----------------------------------------------------------------------
 
-<ifmodule mod_rewrite.c>
-    RewriteEngine On
-
-  # http(s)://www.example.com → https://example.com
-
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
-
-  # http://(www.)example.com → https://example.com
-
-    RewriteCond %{HTTPS} off
-    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-</ifmodule>
+# <ifmodule mod_rewrite.c>
+#     RewriteEngine On
+#
+#   # http(s)://www.example.com → https://example.com
+#
+#     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#     RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+#
+#   # http://(www.)example.com → https://example.com
+#
+#     RewriteCond %{HTTPS} off
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </ifmodule>
 
 # ----------------------------------------------------------------------
 # | http with www                                                       |
