@@ -47,7 +47,13 @@
 		</ul>
 
 		<footer>
-			<p>© 2013-<?= date('Y'); ?>, Daniele De Nobili – <a href="http://www.amazon.it/registry/wishlist/1NBGWEUY9KS1E" target="_blank" rel="noopener noreferrer">WishList</a></p>
+			<p>© 2013-<span class="js-current-year"></span> , Daniele De Nobili – <a href="http://www.amazon.it/registry/wishlist/1NBGWEUY9KS1E" target="_blank" rel="noopener noreferrer">WishList</a></p>
 		</footer>
+
+		<script>
+			window.addEventListener("DOMContentLoaded", () => {
+				document.querySelector(".js-current-year").innerText = new Date().getFullYear();
+			});
+		</script>
     </body>
 </html>
