@@ -2,6 +2,11 @@
   "name": "omilandia",
   "version": "6.0.0",
   "description": "Omilandia.com source code https://omilandia.com",
+  "source": "src/index.html",
+  "scripts": {
+    "watch": "parcel",
+    "build": "parcel build"
+  },
   "devDependencies": {
     "parcel": "^2.6.2",
     "@parcel/transformer-sass": "^2.6.2"
